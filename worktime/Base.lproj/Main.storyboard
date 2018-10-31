@@ -1,24 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RegisterViewController" customModule="worktime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8h-yv-Zf4">
+                                <rect key="frame" x="20" y="120" width="335" height="185"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bur-Gu-Oua">
+                                        <rect key="frame" x="20" y="135" width="295" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="hDT-iP-STe"/>
+                                        </constraints>
+                                        <state key="normal" title="Registrar ponto"/>
+                                        <connections>
+                                            <action selector="registerTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AEe-HP-IR1"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xo5-0w-agi">
+                                        <rect key="frame" x="20" y="20" width="295" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Ffd-Z3-llg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kTa-pv-8jh">
+                                        <rect key="frame" x="20" y="90" width="295" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ChR-ip-ncp"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Xo5-0w-agi" secondAttribute="trailing" constant="20" id="7cI-cL-td8"/>
+                                    <constraint firstItem="Xo5-0w-agi" firstAttribute="leading" secondItem="w8h-yv-Zf4" secondAttribute="leading" constant="20" id="AOW-EC-3gW"/>
+                                    <constraint firstItem="kTa-pv-8jh" firstAttribute="top" secondItem="Xo5-0w-agi" secondAttribute="bottom" constant="20" id="DWk-0N-Dbn"/>
+                                    <constraint firstItem="Xo5-0w-agi" firstAttribute="top" secondItem="w8h-yv-Zf4" secondAttribute="top" constant="20" id="KP4-QL-xlJ"/>
+                                    <constraint firstItem="kTa-pv-8jh" firstAttribute="leading" secondItem="w8h-yv-Zf4" secondAttribute="leading" constant="20" id="THr-Y2-O3H"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bur-Gu-Oua" secondAttribute="bottom" constant="20" id="YcU-o3-nTh"/>
+                                    <constraint firstAttribute="height" constant="185" id="auy-fS-pPU"/>
+                                    <constraint firstAttribute="trailing" secondItem="kTa-pv-8jh" secondAttribute="trailing" constant="20" id="cWv-7F-RhN"/>
+                                    <constraint firstItem="Bur-Gu-Oua" firstAttribute="leading" secondItem="w8h-yv-Zf4" secondAttribute="leading" constant="20" id="dCh-hL-3f6"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bur-Gu-Oua" secondAttribute="trailing" constant="20" id="x4G-Dr-WXs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="w8h-yv-Zf4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="JFE-Zz-zhL"/>
+                            <constraint firstItem="w8h-yv-Zf4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mnR-dU-VMd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w8h-yv-Zf4" secondAttribute="trailing" constant="20" id="sdU-iz-mmW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="clockLabel" destination="Xo5-0w-agi" id="uSw-Ic-9dU"/>
+                        <outlet property="dateTextField" destination="kTa-pv-8jh" id="LGM-qs-9nR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="29.600000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

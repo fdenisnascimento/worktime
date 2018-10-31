@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		5C2C160A2189389B00D93045 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C16092189389B00D93045 /* AppDelegate.swift */; };
-		5C2C160C2189389B00D93045 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C160B2189389B00D93045 /* ViewController.swift */; };
+		5C2C160C2189389B00D93045 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C160B2189389B00D93045 /* RegisterViewController.swift */; };
 		5C2C160F2189389B00D93045 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2C160D2189389B00D93045 /* Main.storyboard */; };
 		5C2C16112189389C00D93045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C2C16102189389C00D93045 /* Assets.xcassets */; };
 		5C2C16142189389C00D93045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2C16122189389C00D93045 /* LaunchScreen.storyboard */; };
 		5C2C161F2189389D00D93045 /* worktimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C161E2189389D00D93045 /* worktimeTests.swift */; };
 		5C2C162A2189389D00D93045 /* worktimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C16292189389D00D93045 /* worktimeUITests.swift */; };
+		5C2C163B21893AAD00D93045 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C163A21893AAD00D93045 /* RegisterView.swift */; };
+		5C2C163E21893B3600D93045 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C163D21893B3600D93045 /* RegisterPresenter.swift */; };
+		5C2C164121894C5000D93045 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2C164021894C5000D93045 /* AlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		5C2C16062189389B00D93045 /* worktime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = worktime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2C16092189389B00D93045 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C2C160B2189389B00D93045 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C2C160B2189389B00D93045 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5C2C160E2189389B00D93045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C2C16102189389C00D93045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C2C16132189389C00D93045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		5C2C16252189389D00D93045 /* worktimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = worktimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2C16292189389D00D93045 /* worktimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = worktimeUITests.swift; sourceTree = "<group>"; };
 		5C2C162B2189389D00D93045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C2C163A21893AAD00D93045 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		5C2C163D21893B3600D93045 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		5C2C164021894C5000D93045 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +103,8 @@
 		5C2C16082189389B00D93045 /* worktime */ = {
 			isa = PBXGroup;
 			children = (
+				5C2C1637218939F900D93045 /* src */,
 				5C2C16092189389B00D93045 /* AppDelegate.swift */,
-				5C2C160B2189389B00D93045 /* ViewController.swift */,
 				5C2C160D2189389B00D93045 /* Main.storyboard */,
 				5C2C16102189389C00D93045 /* Assets.xcassets */,
 				5C2C16122189389C00D93045 /* LaunchScreen.storyboard */,
@@ -123,6 +129,49 @@
 				5C2C162B2189389D00D93045 /* Info.plist */,
 			);
 			path = worktimeUITests;
+			sourceTree = "<group>";
+		};
+		5C2C1637218939F900D93045 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				5C2C163F21894C4000D93045 /* Common */,
+				5C2C163821893A0200D93045 /* PointRegister */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		5C2C163821893A0200D93045 /* PointRegister */ = {
+			isa = PBXGroup;
+			children = (
+				5C2C163C21893B2000D93045 /* Presenter */,
+				5C2C163921893A9900D93045 /* Protocol */,
+				5C2C160B2189389B00D93045 /* RegisterViewController.swift */,
+			);
+			path = PointRegister;
+			sourceTree = "<group>";
+		};
+		5C2C163921893A9900D93045 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				5C2C163A21893AAD00D93045 /* RegisterView.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		5C2C163C21893B2000D93045 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5C2C163D21893B3600D93045 /* RegisterPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5C2C163F21894C4000D93045 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5C2C164021894C5000D93045 /* AlertView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +305,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C2C160C2189389B00D93045 /* ViewController.swift in Sources */,
+				5C2C164121894C5000D93045 /* AlertView.swift in Sources */,
+				5C2C163B21893AAD00D93045 /* RegisterView.swift in Sources */,
+				5C2C160C2189389B00D93045 /* RegisterViewController.swift in Sources */,
 				5C2C160A2189389B00D93045 /* AppDelegate.swift in Sources */,
+				5C2C163E21893B3600D93045 /* RegisterPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
